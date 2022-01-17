@@ -1,0 +1,30 @@
+
+
+/Users/anupsarvade/git/eCommerce      ===== repository 
+
+<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		
+		
+		{
+    "userId": 2,
+    "userName": "madhuri",
+    "password": "computer",
+    "role": "admin",
+    "phone": "7894561230",
+    "address": "320 salt lake citys"
+}
+
+GET
+POST
+PUT
+DELTE
