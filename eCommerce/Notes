@@ -28,3 +28,21 @@ GET
 POST
 PUT
 DELTE
+				/////////////// GITHUB ////////////////////
+
+//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   -------- token 
+		
+		///////////////// Steps for commit from terminal ////////////////
+		// cd
+		// git status
+		// git add .
+		// git commit -m "message"
+		// git push origin master  ( master / local )
+		
+		
+	//////////////////// other commands for git in terminal (bash) ////////////////
+		
+		// git branch
+		// git checkout branchName ( changing from one branch to another branch)
+		// git fetch --all ( if you see origin error in the log)
+		//
