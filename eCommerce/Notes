@@ -54,6 +54,62 @@ DELTE
 		/// testing agagin 
 		
 		
+		Last login: Sat Feb  5 22:37:54 on ttys001
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Anups-MacBook-Pro:~ anupsarvade$ cd git
+Anups-MacBook-Pro:git anupsarvade$ cd eCommerce
+Anups-MacBook-Pro:eCommerce anupsarvade$ cd eCommerce
+Anups-MacBook-Pro:eCommerce anupsarvade$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+Anups-MacBook-Pro:eCommerce anupsarvade$ git pull master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Anups-MacBook-Pro:eCommerce anupsarvade$ git config --global user.name "anoopsarvade@gmail.com"
+Anups-MacBook-Pro:eCommerce anupsarvade$ git config --global user.password "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"
+Anups-MacBook-Pro:eCommerce anupsarvade$ git commit -m "nottes"
+On branch master
+Changes not staged for commit:
+	modified:   ../.DS_Store
+
+no changes added to commit
+Anups-MacBook-Pro:eCommerce anupsarvade$ git push origin master
+Username for 'https://github.com': anoopsarvade@gmail.com
+Password for 'https://anoopsarvade@gmail.com@github.com': 
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (19/19), 1.95 KiB | 996.00 KiB/s, done.
+Total 19 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), completed with 3 local objects.
+To https://github.com/AnoopSarvade/eCommerce.git
+   135488b..d3644e3  master -> master
+Anups-MacBook-Pro:eCommerce anupsarvade$ git commit -m "nottes"
+On branch master
+Changes not staged for commit:
+	modified:   ../.DS_Store
+	modified:   Notes
+
+no changes added to commit
+Anups-MacBook-Pro:eCommerce anupsarvade$ 
+		
+		
+		
 		
 		
 		
