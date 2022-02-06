@@ -109,6 +109,57 @@ no changes added to commit
 Anups-MacBook-Pro:eCommerce anupsarvade$ 
 		
 		
+////////////////////////////////////////////////////
+
+Last login: Sat Feb  5 22:48:51 on ttys001
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Anups-MacBook-Pro:~ anupsarvade$ cd git
+Anups-MacBook-Pro:git anupsarvade$ cd eCommerce
+Anups-MacBook-Pro:eCommerce anupsarvade$ cd eCommerce
+Anups-MacBook-Pro:eCommerce anupsarvade$ git config --global user.name "anoopsarvade@gmail.com"
+Anups-MacBook-Pro:eCommerce anupsarvade$ git config --global user.password "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"
+Anups-MacBook-Pro:eCommerce anupsarvade$ git commit -m "after closing the eclipse and terminal not commiting"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+	modified:   ../.DS_Store
+
+no changes added to commit
+Anups-MacBook-Pro:eCommerce anupsarvade$ git push origin master
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/AnoopSarvade/eCommerce.git/'
+Anups-MacBook-Pro:eCommerce anupsarvade$ git config --global user.name "anoopsarvade@gmail.com"
+Anups-MacBook-Pro:eCommerce anupsarvade$ git config --global user.password "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"
+Anups-MacBook-Pro:eCommerce anupsarvade$ git commit -m "after closing the eclipse and terminal not commiting"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+	modified:   ../.DS_Store
+
+no changes added to commit
+Anups-MacBook-Pro:eCommerce anupsarvade$ git push origin master
+Username for 'https://github.com': anoopsarvade@gmail.com
+Password for 'https://anoopsarvade@gmail.com@github.com': 
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (10/10), 746 bytes | 248.00 KiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/AnoopSarvade/eCommerce.git
+   0e370e9..84097cd  master -> master
+Anups-MacBook-Pro:eCommerce anupsarvade$ git config --global credential.helper cache
+Anups-MacBook-Pro:eCommerce anupsarvade$ git pull
+Already up to date.
+Anups-MacBook-Pro:eCommerce anupsarvade$ 
 		
 		
 		
