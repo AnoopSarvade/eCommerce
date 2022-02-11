@@ -4,7 +4,7 @@ import Button from "../UI/Button";
 
 import { userActions } from "../store/store";
 import classes from "./Login.module.css";
-import {useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import SignUp from "./SignUp";
 
 const Login = () => {
@@ -14,13 +14,17 @@ const Login = () => {
   const [enteredUsername, setEnteredUsername] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
   const [error, setError] = useState();
-  
+
   const usernameChangeHandler = event => {
     setEnteredUsername(event.target.value);
   };
 
   const passwordChangeHandler = event => {
     setEnteredPassword(event.target.value);
+  };
+
+  const signUpHandler = () => {
+    history.push("/signUp");
   };
 
   async function onLoginHandler(event) {
@@ -67,7 +71,9 @@ const Login = () => {
       } else {
         history.push("/admin-home");
       }
-    } catch (error) {setError("Invalid UserName or Password")}
+    } catch (error) {
+      setError("Invalid UserName or Password");
+    }
   }
 
   return (
@@ -89,11 +95,10 @@ const Login = () => {
         />
         <br></br>
 
-        <Button type="submit">Sign UP</Button>
+        <Button onClick={signUpHandler}>Sign UP</Button>
         <Button type="submit">Sign IN</Button>
       </form>
-    {error && <p style={{color: "red"}}>{error}</p>}
-    <SignUp></SignUp>
+      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
 };

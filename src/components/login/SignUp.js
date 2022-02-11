@@ -1,9 +1,10 @@
 import obj from "./SignUp.module.css";
 import { useState } from "react";
 import Button from "../UI/Button";
-
+import {useHistory} from "react-router-dom";
 
 function SignUp() {
+  let history = useHistory();
   const [enteredUsername, setEnteredUsername] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
   const [enteredRole, setEnteredRole] = useState("");
@@ -30,9 +31,69 @@ function SignUp() {
     setEnteredAddress(event.target.value);
   };
 
+  function resetHandler() {
+    setEnteredUsername("");
+    setEnteredPassword("");
+    setEnteredRole("");
+    setEnteredPhone("");
+    setEnteredAddress("");
+  }
+
+  // const resetHandler = () =>{
+
+  // };
+
+  function backToLoginHandler() {
+    history.push("/login");
+  };
+
+  async function onSubmitHandler(event) {
+    event.preventDefault();
+    if (
+      enteredUsername.trim().length === 0 ||
+      enteredPassword.trim().length === 0 ||
+      enteredRole.trim().length === 0 ||
+      enteredPhone.trim().length === 0 ||
+      enteredAddress.trim().length === 0
+    ) {
+      setError("fields should not be empty");
+      return;
+    }
+    const requestData = {
+      mode: "cors",
+      headers: {
+        "Access-Control-Allow-Origin": "*"
+      },
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userName: enteredUsername,
+        password: enteredPassword,
+        role: enteredRole,
+        phone: enteredPhone,
+        address: enteredAddress
+      })
+    };
+
+    try {
+      const response = await fetch(
+        "http://localhost:8080/eCommerce/user",
+        requestData
+      );
+
+      const data = await response.json();
+      console.log(data);
+      setEnteredUsername("");
+      setEnteredPassword("");
+      setEnteredRole("");
+      setEnteredPhone("");
+      setEnteredAddress("");
+    } catch (error) {}
+  }
+
   return (
-    <div className ={obj.input}>
-      <form >
+    <div className={obj.input}>
+      <form onSubmit={onSubmitHandler}>
         <label>Username</label>
         <input
           type="text"
@@ -43,7 +104,7 @@ function SignUp() {
 
         <label>Password</label>
         <input
-          type="text"
+          type="password"
           value={enteredPassword}
           onChange={passwordChangeHandler}
         />
@@ -66,11 +127,14 @@ function SignUp() {
         <br></br>
 
         <Button type="submit">Sign UP</Button>
-        <Button type="submit">Reset</Button>
-        <Button type="submit">Back</Button>
+        <Button onClick={resetHandler}>Reset</Button>
+        <Button onClick={backToLoginHandler}>Back To Login</Button>
       </form>
+      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
 }
 
 export default SignUp;
+
+

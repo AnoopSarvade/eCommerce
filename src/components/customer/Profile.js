@@ -7,7 +7,7 @@ const Profile = (props) => {
   const role = useSelector((state) => state.user.role);
   const phone = useSelector((state) => state.user.phone);
   const address = useSelector((state) => state.user.address);
-
+  
   return (
     <div>
       <div>User Profile</div>

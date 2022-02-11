@@ -4,6 +4,7 @@ import AdminHome from "./components/admin/AdminHome";
 import Home from "./components/customer/Home";
 import Profile from "./components/customer/Profile";
 import Login from "./components/login/Login";
+import SignUp from "./components/login/SignUp";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route exact path="/profile">
           <Profile />
+        </Route>
+        <Route exact path="/signUp">
+          <SignUp />
         </Route>
         <Route path="/">
           <Redirect to="/login" />
